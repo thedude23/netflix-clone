@@ -8,18 +8,16 @@ tabItems.forEach(item => {
 
 // Select tab content item
 function selectItem(e) {
-	// Remove all show and border classes
+	// 1. Remove all show and border classes
 	removeBorder();
 	removeShow();
 
-	// Add border to current tab item
+	// 2. Add border to current tab item
 	this.classList.add('tab-border');
 
-	// Grab content item from DOM
+	// 3. Grab content item from DOM and add show class
 	// console.log(this.id)
 	const tabContentItem = document.querySelector(`#${this.id}-content`);
-
-	// Add show class
 	tabContentItem.classList.add('show');
 }
 
